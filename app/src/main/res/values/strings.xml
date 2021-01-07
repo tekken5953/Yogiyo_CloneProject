@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Yogiyo_CloneProject</string>
+    <string name="home">홈</string>
+    <string name="heart">찜</string>
+    <string name="search">검색</string>
+    <string name="order_list">주문내역</string>
+    <string name="mypage">마이요기요</string>
+</resources>
