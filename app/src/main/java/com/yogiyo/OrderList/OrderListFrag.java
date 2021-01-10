@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -48,6 +49,11 @@ public class OrderListFrag extends Fragment {
                 "GS25-용운점", "컵라면 + 만두 + 삼각김밥");
         addItem(ResourcesCompat.getDrawable(getResources(), R.drawable.starbucks, null), "2021-01-19 18:06", "배달완료",
                 "스타벅스-중앙로점", "아이스아메리카노(R) + 허니브레드");
+
+        mAdapter.setOnItemClickListener((v, position) -> {
+            Intent intent = new Intent(getActivity(), OrderResultActivity.class);
+            startActivity(intent);
+        });
     }
 
     public void addItem(Drawable img, String time, String complete, String name, String menu) {

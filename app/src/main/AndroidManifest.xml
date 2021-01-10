@@ -9,11 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Yogiyo_CloneProject">
-        <activity android:name=".BannerFragment.Banner4"></activity>
-        <activity android:name=".BannerFragment.Banner3" />
-        <activity android:name=".BannerFragment.Banner2" />
-        <activity android:name=".BannerFragment.Banner1" />
-        <activity android:name=".HomeFrag.StoreListFrag" />
+        <activity android:name=".OrderList.OrderResultActivity"/>
+        <activity android:name=".StoreDetailActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -25,7 +25,6 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:background="@drawable/tv_corner_box_black"
-        android:padding="2dp"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view11" />
