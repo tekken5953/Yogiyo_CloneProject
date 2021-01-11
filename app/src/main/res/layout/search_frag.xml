@@ -6,13 +6,304 @@
     android:layout_height="match_parent"
     tools:context=".SearchFrag">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="search"
+    <FrameLayout
+        android:id="@+id/search_frame"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/search_searchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view22"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_frame" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_nothing_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/view22">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:text="최근 검색어"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:drawableLeft="@drawable/delete"
+            android:gravity="center"
+            android:text="전체삭제"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:drawableRight="@drawable/questionmark"
+            android:drawablePadding="5dp"
+            android:text="인기 검색어"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_recyclerView" />
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:layout_marginBottom="2dp"
+                    android:text="#아구해물찜"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#교촌치킨"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#된장찌개"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#롯데리아"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#순대국밥"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#네네치킨"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/button9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#떡국"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/button10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#푸라닭"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/button11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#회덮밥"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/button12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#족발"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/button13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#곰탕"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/button14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#노랑통닭"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/button15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:layout_marginBottom="2dp"
+                    android:text="#생선구이"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/button16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/search_popular_button"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="#페리카나"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

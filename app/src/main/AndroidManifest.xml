@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Yogiyo_CloneProject">
-        <activity android:name=".OrderList.OrderResultActivity"/>
+        <activity android:name=".YoFeed.YoFeedFrag"></activity>
+        <activity android:name=".OrderList.OrderResultActivity" />
         <activity android:name=".StoreDetailActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
