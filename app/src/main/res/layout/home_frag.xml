@@ -78,7 +78,7 @@
             <View
                 android:id="@+id/view3"
                 android:layout_width="0dp"
-                android:layout_height="5dp"
+                android:layout_height="7dp"
                 android:background="@color/light_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +103,7 @@
             <View
                 android:id="@+id/view4"
                 android:layout_width="0dp"
-                android:layout_height="5dp"
+                android:layout_height="7dp"
                 android:background="@color/light_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

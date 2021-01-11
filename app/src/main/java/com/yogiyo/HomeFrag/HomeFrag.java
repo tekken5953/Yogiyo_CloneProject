@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.yogiyo.BannerFragment.Banner1;
 import com.yogiyo.BannerFragment.Banner2;
@@ -22,6 +23,7 @@ import com.yogiyo.BannerFragment.Banner3;
 import com.yogiyo.BannerFragment.Banner4;
 import com.yogiyo.MainActivity;
 import com.yogiyo.R;
+import com.yogiyo.YoFeed.YoFeedFrag;
 
 import java.util.ArrayList;
 
@@ -38,6 +40,13 @@ public class HomeFrag extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        //알람 클릭시 화면전환
+        ImageView notify = getActivity().findViewById(R.id.home_notify_iv);
+        notify.setOnClickListener(view -> {
+            ((MainActivity) getActivity()).replaceFragment(YoFeedFrag.newInstance());
+        });
+
         //배너 뷰페이저 생성
         viewPager = getActivity().findViewById(R.id.home_viewPager);
         viewPagerAdapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());

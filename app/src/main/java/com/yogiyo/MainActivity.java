@@ -10,15 +10,19 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.yogiyo.HomeFrag.HomeFrag;
 import com.yogiyo.OrderList.OrderListFrag;
 import com.yogiyo.databinding.ActivityMainBinding;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    private long lastTimeBackPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,5 +68,38 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.main_frame, fragment).commit();      // Fragment로 사용할 MainActivity내의 layout공간을 선택합니다.
+    }
+
+    //뒤로가기 버튼을 뺏어올 리스너 등록
+    public interface onKeyBackPressedListener {
+        void onBackKey();
+    }
+
+    private onKeyBackPressedListener mOnKeyBackPressedListener;
+
+    public void setOnKeyBackPressedListener(onKeyBackPressedListener listener) {
+        mOnKeyBackPressedListener = listener;
+    } //메인에서 토스트를 띄우며 종료확인을 하기 위해 필드선언
+
+    @Override
+    public void onBackPressed() {
+
+        //프래그먼트 onBackPressedListener사용
+        List<Fragment> fragmentList = getSupportFragmentManager().getFragments();
+        for(Fragment fragment : fragmentList){
+            if(fragment instanceof onBackPressedListener){
+                ((onBackPressedListener)fragment).onBackPressed();
+                return;
+            }
+        }
+
+        //두 번 클릭시 어플 종료
+        if(System.currentTimeMillis() - lastTimeBackPressed < 1500){
+            finish();
+            return;
+        }
+        lastTimeBackPressed = System.currentTimeMillis();
+        Toast.makeText(this,"'뒤로' 버튼을 한 번 더 누르면 종료됩니다.",Toast.LENGTH_SHORT).show();
+
     }
 }

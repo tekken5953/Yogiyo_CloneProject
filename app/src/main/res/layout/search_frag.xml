@@ -109,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -118,10 +118,11 @@
                     android:lines="1"
                     android:layout_marginBottom="2dp"
                     android:text="#아구해물찜"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button4"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -130,10 +131,11 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#교촌치킨"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button5"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -143,6 +145,7 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#된장찌개"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
@@ -153,7 +156,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button6"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -162,10 +165,11 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#롯데리아"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button7"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -174,10 +178,11 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#순대국밥"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button8"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -186,11 +191,12 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#네네치킨"
+                    android:stateListAnimator="@null"
                     android:layout_marginBottom="2dp"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button9"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -199,6 +205,7 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#떡국"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
             </TableRow>
@@ -208,7 +215,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button10"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -217,10 +224,11 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#푸라닭"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button11"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -229,10 +237,11 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#회덮밥"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button12"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -241,11 +250,12 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#족발"
+                    android:stateListAnimator="@null"
                     android:layout_marginBottom="2dp"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button13"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -254,6 +264,7 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#곰탕"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
             </TableRow>
@@ -263,7 +274,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button14"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -272,10 +283,11 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#노랑통닭"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button15"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -285,10 +297,11 @@
                     android:lines="1"
                     android:layout_marginBottom="2dp"
                     android:text="#생선구이"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button16"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -297,6 +310,7 @@
                     android:gravity="center"
                     android:lines="1"
                     android:text="#페리카나"
+                    android:stateListAnimator="@null"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="12sp" />
             </TableRow>

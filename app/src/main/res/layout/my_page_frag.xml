@@ -218,7 +218,7 @@
     <View
         android:id="@+id/view10"
         android:layout_width="0dp"
-        android:layout_height="5dp"
+        android:layout_height="7dp"
         android:background="@color/light_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
